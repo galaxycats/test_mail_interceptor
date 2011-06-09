@@ -1,6 +1,18 @@
 = test_mail_interceptor
 
-Description goes here.
+With this library you can catch all outgoing e-mails and redirect them to a specific address. This is very useful for testing purpose, for example on your staging/testing server.
+
+== How to configure
+
+In your Gemfile include
+  
+  gem 'test_mail_interceptor'
+  
+then add these two lines to your config (for example environments/staging.rb)
+  
+  config.mail_interceptor.intercept_mail = true
+  config.mail_interceptor.test_recipient = "catch-all-staging@example.com"
+
 
 == Contributing to test_mail_interceptor
  
@@ -14,6 +26,6 @@ Description goes here.
 
 == Copyright
 
-Copyright (c) 2011 Andi Bade. See LICENSE.txt for
+Copyright (c) 2011 Galaxy Cats IT Consulting GmbH. See LICENSE.txt for
 further details.
 

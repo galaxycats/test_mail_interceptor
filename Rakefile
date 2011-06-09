@@ -15,9 +15,9 @@ Jeweler::Tasks.new do |gem|
   gem.name = "test_mail_interceptor"
   gem.homepage = "http://github.com/thyphoon/test_mail_interceptor"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
-  gem.email = "andi.bade@gmail.com"
+  gem.summary = %Q{redirect all outgoing emails to one address}
+  gem.description = %Q{With this library you can catch all outgoing e-mails and redirect them to a specific address. This is very useful for testing purpose, for example on your staging/testing server.}
+  gem.email = "andi@galaxycats.com"
   gem.authors = ["Andi Bade"]
   # Include your dependencies below. Runtime dependencies are required when using your gem,
   # and development dependencies are only needed for development (ie running rake tasks, tests, etc)
@@ -29,13 +29,6 @@ Jeweler::RubygemsDotOrgTasks.new
 require 'rake/testtask'
 Rake::TestTask.new(:test) do |test|
   test.libs << 'lib' << 'test'
-  test.pattern = 'test/**/test_*.rb'
-  test.verbose = true
-end
-
-require 'rcov/rcovtask'
-Rcov::RcovTask.new do |test|
-  test.libs << 'test'
   test.pattern = 'test/**/test_*.rb'
   test.verbose = true
 end
