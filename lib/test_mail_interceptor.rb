@@ -1,5 +1,9 @@
 class TestMailInterceptor
- 
+
+  class Engine < Rails::Engine
+    config.mail_interceptor = ActiveSupport::OrderedOptions.new
+  end
+  
   def self.delivering_email(mail)
     if Rails.application.config.mail_interceptor.intercept_mail
       interceptor = new(mail)
