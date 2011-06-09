@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{test_mail_interceptor}
-  s.version = "0.1.0"
+  s.version = "0.1.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Andi Bade"]
@@ -26,7 +26,8 @@ Gem::Specification.new do |s|
     "VERSION",
     "lib/test_mail_interceptor.rb",
     "test/helper.rb",
-    "test/test_test_mail_interceptor.rb"
+    "test/test_test_mail_interceptor.rb",
+    "test_mail_interceptor.gemspec"
   ]
   s.homepage = %q{http://github.com/thyphoon/test_mail_interceptor}
   s.licenses = ["MIT"]
